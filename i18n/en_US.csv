@@ -1,0 +1,21 @@
+"Export CSV","Export CSV"
+"You have <strong>%1</strong> rule(s) configured","You have <strong>%1</strong> rule(s) configured"
+"Rules table is empty","Rules table is empty"
+"Cash on delivery","Cash on delivery"
+"You will be charged by an extra fee of %1 (+%2 taxes)","You will be charged by an extra fee of %1 (+%2 taxes)"
+"Invalid columns count.","Invalid columns count."
+"Cash On Delivery","Cash On Delivery"
+"Cash On Delivery - MageSpecialist","Cash On Delivery - MageSpecialist"
+Enabled,Enabled
+Title,Title
+"New Order Status","New Order Status"
+"Payment from Applicable Countries","Payment from Applicable Countries"
+"Payment from Specific Countries","Payment from Specific Countries"
+"Exclude Specific Regions","Exclude Specific Regions"
+"Minimum Order Total","Minimum Order Total"
+"Maximum Order Total","Maximum Order Total"
+Export,Export
+Import,Import
+"Sort Order","Sort Order"
+"Cash on delivery amount","Cash on delivery amount"
+"Cash on delivery tax","Cash on delivery tax"
