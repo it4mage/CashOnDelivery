@@ -1,0 +1,21 @@
+"Export CSV","Esporta CSV"
+"You have <strong>%1</strong> rule(s) configured","Hai <strong>%1</strong> regola(e) configurata(e)."
+"Rules table is empty","La tabella delle regole &egrave; vuota"
+"Cash on delivery","Contrassegno"
+"You will be charged by an extra fee of %1 (+%2 taxes)","Verr&agrave; addebitato un costo addizionale di %1 (+%2 iva)"
+"Invalid columns count.","Conteggio colonne non valido."
+"Cash On Delivery","Contrassegno"
+"Cash On Delivery - MageSpecialist","Contrassegno - MageSpecialist"
+Enabled,Abilitato
+Title,Titolo
+"New Order Status","Nuovo Stato Ordine"
+"Payment from Applicable Countries","Abilita Metodo gli Stati"
+"Payment from Specific Countries","Abilita Metodo Per Stati Specifici"
+"Exclude Specific Regions","Escludi Regioni Specifiche"
+"Minimum Order Total","Totale Ordine Minimo"
+"Maximum Order Total","Totale Ordine Massimo"
+Export,Esporta
+Import,Importa
+"Sort Order","Ordinamento"
+"Cash on delivery amount","Importo Del Contrassegno"
+"Cash on delivery tax","Iva sul Contrassegno"
