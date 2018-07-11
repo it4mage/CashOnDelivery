@@ -28,11 +28,4 @@
             <resource ref="anonymous" />
         </resources>
     </route>
-
-    <route url="/V1/carts/mine/msp-cashondelivery-change-payment-method" method="GET">
-        <service class="MSP\CashOnDelivery\Api\CashondeliveryCartInterface" method="savePaymentMethod"/>
-        <resources>
-            <resource ref="anonymous" />
-        </resources>
-    </route>
 </routes>
