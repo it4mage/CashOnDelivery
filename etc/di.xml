@@ -36,6 +36,9 @@
         <plugin name="mSPCashOnDeliveryTotalsCollectorReset"
                 type="MSP\CashOnDelivery\Plugin\Model\Quote\TotalsCollector" />
     </type>
+    <type name="Magento\Sales\Api\OrderRepositoryInterface">
+        <plugin name="mSPCashOnDeliveryFields" type="MSP\CashOnDelivery\Plugin\Api\OrderRepositoryPlugin" sortOrder="1" disabled="false"/>
+    </type>
 
     <!--<virtualType name="MSP\CashOnDelivery\Model\Total\Creditmemo\Cashondelivery" type="MSP\CashOnDelivery\Model\Total\Invoice\Cashondelivery" />-->
     <!--<virtualType name="MSP\CashOnDelivery\Model\Total\Creditmemo\CashondeliveryTax" type="MSP\CashOnDelivery\Model\Total\Invoice\CashondeliveryTax" />-->
