@@ -1,14 +1,11 @@
 {
-    "name": "msp/cashondelivery",
+    "name": "it4mage/cashondelivery",
     "description": "",
     "require": {
         "php": "^7.0|^7.1",
-        "msp/common": "*",
-
         "magento/magento-composer-installer": "*"
     },
     "suggest": {
-
     },
     "type": "magento2-module",
     "license": "OSL 3.0",
