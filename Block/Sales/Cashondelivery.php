@@ -45,7 +45,10 @@ class Cashondelivery extends Template
                 [
                     'code' => 'msp_cashondelivery',
                     'strong' => false,
-                    'value' => $source->getBaseMspCodAmount() - $source->getBaseMspCodTaxAmount(),
+                    /*Get Base price with tax Tax in customer order page */
+                    'value' => $source->getBaseMspCodAmount() + $source->getBaseMspCodTaxAmount(),
+                    /*Get Base price without tax in customer order page */
+                    /* 'value' => $source->getBaseMspCodAmount() , */
                     'label' => __('Cash on delivery'),
                 ]
             );
