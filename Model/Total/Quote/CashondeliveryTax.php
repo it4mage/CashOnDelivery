@@ -80,8 +80,12 @@ class CashondeliveryTax extends AbstractTotal
             $total->setBaseTaxAmount($total->getBaseTaxAmount() + $baseTaxAmount);
             $total->setTaxAmount($total->getTaxAmount() + $taxAmount);
 
-            $total->setBaseGrandTotal($total->getBaseGrandTotal() + $baseTaxAmount);
-            $total->setGrandTotal($total->getGrandTotal() + $taxAmount);
+            if (!$this->cashOnDeliveryInterface->cashondeliveryFeeIncludesTax()) {
+                //If the configured fee does not already include the tax amount, then manually add it to the grand
+                //total
+                $total->setBaseGrandTotal($total->getBaseGrandTotal() + $baseTaxAmount);
+                $total->setGrandTotal($total->getGrandTotal() + $taxAmount);
+            }
         }
 
         /*

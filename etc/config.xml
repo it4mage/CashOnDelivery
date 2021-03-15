@@ -33,6 +33,7 @@
                 <sort_order>100</sort_order>
                 <group>offline</group>
                 <used_totals>subtotal,tax,shipping</used_totals>
+                <tax>0</tax>
             </msp_cashondelivery>
         </payment>
     </default>
