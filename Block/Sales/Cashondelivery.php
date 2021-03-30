@@ -39,13 +39,17 @@ class Cashondelivery extends Template
         $parent = $this->getParentBlock();
         $source = $parent->getSource();
 
+        //@todo: Usually, if the fee is inputted as "VAT included" it means that it should also be displayed as "VAT
+        //  included". Likewise, if it is inputted as "VAT excluded", that's how it should be displayed.
+        //  However it would be even better to actually check how the total should be displayed instead of making
+        //  assumptions
         $payment = $this->getPayment($source);
         if ($payment && ($payment->getMethod() == Payment::CODE)) {
             $fee = new DataObject(
                 [
                     'code' => 'msp_cashondelivery',
                     'strong' => false,
-                    'value' => $source->getBaseMspCodAmount() - $source->getBaseMspCodTaxAmount(),
+                    'value' => $source->getBaseMspCodAmount(),  //See comment block above
                     'label' => __('Cash on delivery'),
                 ]
             );
