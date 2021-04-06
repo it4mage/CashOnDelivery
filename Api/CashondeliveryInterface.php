@@ -48,4 +48,10 @@ interface CashondeliveryInterface
      * @return \MSP\CashOnDelivery\Api\CashondeliveryCartInterface
      */
     public function getCartInformation();
+
+    /**
+     * Returns true if the COD fee as saved in the DB already includes taxes, false otherwise
+     * @return bool
+     */
+    public function cashondeliveryFeeIncludesTax();
 }

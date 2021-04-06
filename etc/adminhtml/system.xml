@@ -59,6 +59,11 @@
                     <label>Maximum Order Total</label>
                     <comment>Leave empty to disable limit</comment>
                 </field>
+                <field id="tax" translate="label" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Fee prices in CSV file</label>
+                    <source_model>MSP\CashOnDelivery\Model\Config\Source\Fee\Tax</source_model>
+                    <comment>Indicates how to treat prices found in the CSV file.&lt;br/&gt;By default the setting in &lt;strong&gt;Sales -&gt; Tax -&gt; Calculation Settings -&gt; Shipping prices&lt;/strong&gt; is used.</comment>
+                </field>
                 <field id="export" translate="label" type="MSP\CashOnDelivery\Block\Adminhtml\Form\Field\Export" sortOrder="100" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Export</label>
                 </field>

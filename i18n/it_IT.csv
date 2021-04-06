@@ -19,3 +19,6 @@ Import,Importa
 "Sort Order","Ordinamento"
 "Cash on delivery amount","Importo Del Contrassegno"
 "Cash on delivery tax","Iva sul Contrassegno"
+"Fee prices in CSV file","Prezzi del contrassegno nel CSV"
+"Use shipping price setting","Usa l'impostazione del prezzo di spedizione"
+"Indicates how to treat prices found in the CSV file.<br/>By default the setting in <strong>Sales -> Tax -> Calculation Settings -> Shipping prices</strong> is used.","Indica come trattare i prezzi nel file CSV.<br/>Di default si usa l'impostazione del campo <strong>Vendite -> Tassa -> Impostazioni di calcolo -> Prezzi di spedizione</strong>."

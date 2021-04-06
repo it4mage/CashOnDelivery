@@ -27,6 +27,7 @@ use Magento\Tax\Api\TaxCalculationInterface;
 use Magento\Tax\Helper\Data as TaxHelper;
 use MSP\CashOnDelivery\Api\CashondeliveryInterface;
 use MSP\CashOnDelivery\Api\CashondeliveryTableInterface;
+use MSP\CashOnDelivery\Model\Config\Source\Fee\Tax;
 
 class Cashondelivery implements CashondeliveryInterface
 {
@@ -124,7 +125,12 @@ class Cashondelivery implements CashondeliveryInterface
     {
         $rate = $this->getShippingTaxRate();
 
-        return $amount * ($rate / 100);
+        if ($this->cashondeliveryFeeIncludesTax()) {
+            //Extract the tax amount from the configured amount
+            return $amount * ($rate / ($rate + 100));
+        } else {
+            return $amount * ($rate / 100);
+        }
     }
 
     /**
@@ -143,5 +149,28 @@ class Cashondelivery implements CashondeliveryInterface
     {
         $id = $this->taxHelper->getShippingTaxClass(null);
         return $this->taxCalculation->getCalculatedRate($id);
+    }
+
+    /**
+     * @return bool
+     */
+    public function cashondeliveryFeeIncludesTax()
+    {
+        $taxCalculationSetting = $this->scopeConfigInterface->getValue(
+            'payment/msp_cashondelivery/tax',
+            ScopeInterface::SCOPE_STORE
+        );
+
+        switch ($taxCalculationSetting) {
+            case Tax::INCLUDING_TAX:
+                return true;
+            case Tax::EXCLUDING_TAX:
+                return false;
+            default:
+                return $this->scopeConfigInterface->isSetFlag(
+                    'tax/calculation/shipping_includes_tax',
+                    ScopeInterface::SCOPE_STORE
+                );
+        }
     }
 }
