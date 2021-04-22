@@ -7,4 +7,9 @@
                   instance="MSP\CashOnDelivery\Observer\SalesModelServiceQuoteSubmitBefore"/>
     </event>
 
+    <event name="sales_order_place_after">
+        <observer name="msp_change_order_status"
+                  instance="MSP\CashOnDelivery\Observer\ChangeOrderStatus" />
+    </event>
+
 </config>
